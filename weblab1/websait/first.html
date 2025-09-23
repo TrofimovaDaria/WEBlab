@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Чёрный Плащ — Возвращение Чёрного Рыцаря</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --main-color: #9D85FF;
+    }
+
+    /* Лого */
+    header img {
+      height: 80px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    /* Поле поиска */
+    .custom-search:focus {
+      outline: none;
+      border-color: var(--main-color);
+      box-shadow: 0 0 0 0.2rem #EBA6FF ;
+    }
+
+    /* Кнопка поиска */
+    .btn-search {
+      background-color: var(--main-color);
+      border: none;
+      color: white;
+    }
+    .btn-search:hover, .btn-search:active {
+      background-color: #EBA6FF;
+      color: white;
+    }
+
+    /* Главное изображение */
+    #main-book {
+      max-width: 100%;
+      max-height: 500px;
+      object-fit: contain;
+    }
+
+    /* Миниатюры */
+    .book-thumbs img {
+      width: 70px;
+      height: auto;
+      cursor: pointer;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      transition: 0.2s;
+    }
+    .book-thumbs img:hover {
+      border-color: var(--main-color);
+    }
+    .book-thumbs img.active {
+      border-color: var(--main-color);
+    }
+    /* Кнопка Купить */
+    .btn-buy {
+      background-color: #9D85FF;
+      color: #fff;
+      border: none;
+      transition: 0.2s;
+    }
+    .btn-buy:hover {
+      background-color: #7a63e0;
+      color: #fff;
+    }
+    /* Меню */
+    .nav-menu .nav-link {
+      color: #43338a;
+      font-weight: 500;
+       transition: color 0.2s ease-in-out;
+      }
+      .nav-menu .nav-link:hover {
+        color: var(--main-color);
+      }
+      </style>
+      </head>
+      <body class="bg-light">
+
+<!-- Header -->
+<header class="bg-white border-bottom shadow-sm">
+  <div class="container py-3">
+    <div class="row align-items-center">
+      <!-- Логотип -->
+      <div class="col-md-3 d-flex align-items-center mb-2 mb-md-0">
+        <a href="#" class="d-flex align-items-center text-dark text-decoration-none fs-4 fw-bold">
+          <img src="images/Group 2.png" alt="Логотип">
+        </a>
+      </div>
+
+      <!-- Поиск -->
+      <div class="col-md-9 mb-2 mb-md-0">
+        <form>
+          <div class="input-group">
+            <input type="text" class="form-control custom-search" placeholder="Искать на YaChitau">
+            <button class="btn btn-search" type="submit">Поиск</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Навигация отдельной строкой -->
+    <div class="row mt-3">
+      <div class="col-12">
+        <ul class="nav justify-content-center">
+          <li><a href="#" class="nav-link px-3">Книги</a></li>
+          <li><a href="#" class="nav-link px-3">Новинки</a></li>
+          <li><a href="#" class="nav-link px-3">Бестселлеры</a></li>
+          <li><a href="#" class="nav-link px-3">Акции</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>
+
+
+<!-- Основной контент -->
+<main class="container my-5">
+  <div class="row g-5">
+    
+    <!-- Левая колонка: обложка + миниатюры -->
+    <div class="col-md-5">
+      <div class="row g-3">
+        <!-- Миниатюры -->
+        <div class="col-3 d-flex flex-column align-items-center gap-2 book-thumbs">
+          <img src="images/cover.jpg" class="img-thumbnail active" alt="Обложка">
+          <img src="images/back.jpg" class="img-thumbnail" alt="Задняя">
+          <img src="images/inside.jpg" class="img-thumbnail" alt="Внутри">
+        </div>
+        <!-- Главное изображение -->
+        <div class="col-9 d-flex justify-content-center align-items-start">
+          <img id="main-book" src="images/cover.jpg" alt="Черный Плащ" class="rounded shadow">
+        </div>
+      </div>
+    </div>
+
+    <!-- Правая колонка: описание -->
+    <div class="col-md-7">
+      <h1>Чёрный Плащ. Возвращение Чёрного Рыцаря. Комикс</h1>
+      <p class="text-muted">Джеймс Сильвани</p>
+
+      <!-- Рейтинг -->
+      <div class="d-flex align-items-center mb-3">
+        <span class="me-2 text-warning fs-5">★ 5</span>
+        <small class="text-muted">(57 отзывов)</small>
+      </div>
+
+      <!-- О книге -->
+      <h5>О книге</h5>
+      <p>
+        Уже больше года прошло с тех пор, как отважный защитник Сан-Канара —
+        Чёрный Плащ — вступал в борьбу с преступностью. Все злодеи затаились, а что же наш ЧП?
+        Теперь его жизнь так же скучна и предсказуема, как и офисная работа.
+        Казалось, город может спать спокойно, но враги, как старые, так и новые,
+        под покровом ночи не дремлют и строят коварные планы.
+        Чтобы помешать реализации злого заговора, тихоне Кряку Лапчатому придется
+        в очередной раз надеть плащ и маску и превратиться в «ужас, летящий на крыльях ночи!».
+      </p>
+
+      <!-- Цена -->
+      <div class="my-3">
+        <span class="fs-3 fw-bold">1049 ₽</span>
+        <del class="text-muted ms-2">1238 ₽</del>
+        <span class="badge bg-danger ms-2">-15%</span>
+      </div>
+
+      <!-- Кнопка купить -->
+    <button class="btn btn-buy btn-lg">Купить</button>
+
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="bg-dark text-white text-center py-4 mt-5">
+  <p class="mb-0">© 2025 YaChitau. Все права защищены.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+  // Галерея
+  const mainBook = document.getElementById("main-book");
+  const thumbs = document.querySelectorAll(".book-thumbs img");
+
+  thumbs.forEach(thumb => {
+    thumb.addEventListener("click", () => {
+      mainBook.src = thumb.src; 
+      thumbs.forEach(t => t.classList.remove("active"));
+      thumb.classList.add("active");
+    });
+  });
+</script>
+
+</body>
+</html>
